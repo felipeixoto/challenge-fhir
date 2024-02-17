@@ -8,18 +8,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.leonardo.challenge.model.Address;
-import com.leonardo.challenge.service.ConsumerService;
+import com.leonardo.challenge.model.vo.v1.PatientVo;
+import com.leonardo.challenge.service.PatientService;
 
 @RestController
-@RequestMapping("/api/cep")
+@RequestMapping("/api/patient")
 public class PatientController {
 
 	@Autowired
-	private ConsumerService service;
+	private PatientService service;
 
-	@GetMapping("/{cepSearch}")
+	@GetMapping("/cep/{cepSearch}")
 	private ResponseEntity<?> getAddressInformation(@PathVariable("cepSearch") String cepSearch) {
 		Address address = service.getAddress(cepSearch);
+		return ResponseEntity.ok(address);
+	}
+
+	@GetMapping("/{id}")
+	private ResponseEntity<?> findPatient(@PathVariable("id") Long id) {
+		PatientVo address = service.findPatient(id);
 		return ResponseEntity.ok(address);
 	}
 
