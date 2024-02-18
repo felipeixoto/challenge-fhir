@@ -11,9 +11,9 @@ public class NameVo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	public String use;
-	public String family;
-	public ArrayList<String> given;
+	private String use;
+	private String family;
+	private ArrayList<String> given;
 
 	public NameVo() {
 	}

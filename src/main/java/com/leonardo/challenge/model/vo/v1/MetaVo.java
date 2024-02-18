@@ -11,9 +11,9 @@ public class MetaVo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	public String versionId;
-	public Date lastUpdated;
-	public String source;
+	private String versionId;
+	private Date lastUpdated;
+	private String source;
 
 	public MetaVo() {
 	}

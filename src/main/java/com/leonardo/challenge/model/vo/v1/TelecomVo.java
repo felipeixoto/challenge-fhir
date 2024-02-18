@@ -10,10 +10,10 @@ public class TelecomVo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	public String system;
-	public String value;
-	public String use;
-	public int rank;
+	private String system;
+	private String value;
+	private String use;
+	private int rank;
 
 	public TelecomVo() {
 	}

@@ -17,7 +17,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
 @RestController
-@RequestMapping("/api/patient")
+@RequestMapping("/api/patient/v1")
 public class PatientController {
 
 	@Autowired
@@ -29,9 +29,10 @@ public class PatientController {
 			@ApiResponse(description = "No Content", responseCode = "204", content = @Content), @ApiResponse(description = "Bad Request", responseCode = "400", content = @Content),
 			@ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content), @ApiResponse(description = "Not Found", responseCode = "404", content = @Content),
 			@ApiResponse(description = "Internal Error", responseCode = "500", content = @Content) })
-	private ResponseEntity<?> findPatient(@PathVariable("id") Long id) {
-		PatientVo address = service.findById(id);
-		return ResponseEntity.ok(address);
+	public ResponseEntity<?> findPatient(@PathVariable("id") Long id) {
+		
+		PatientVo patient = service.findById(id);
+		return ResponseEntity.ok(patient);
 	}
 
 }

@@ -10,8 +10,8 @@ public class TextVo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	public String status;
-	public String div;
+	private String status;
+	private String div;
 
 	public TextVo() {
 	}

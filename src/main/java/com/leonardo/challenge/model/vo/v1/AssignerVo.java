@@ -10,7 +10,7 @@ public class AssignerVo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	public String display;
+	private String display;
 
 	public AssignerVo() {
 	}

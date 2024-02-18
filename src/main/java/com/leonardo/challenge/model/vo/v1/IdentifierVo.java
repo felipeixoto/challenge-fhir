@@ -10,9 +10,9 @@ public class IdentifierVo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	public String use;
-	public String value;
-	public AssignerVo assigner;
+	private String use;
+	private String value;
+	private AssignerVo assigner;
 
 	public IdentifierVo() {
 	}

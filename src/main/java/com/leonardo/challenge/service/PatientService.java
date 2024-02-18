@@ -19,10 +19,12 @@ public class PatientService {
 	public PatientVo findById(Long id) {
 
 		logger.info("Finding patient by ID: " + id);
-
+		
 		String url = "http://hapi.fhir.org/baseR4/Patient/44471637/_history/" + id;
 		RestTemplate restTemplate = new RestTemplateBuilder().errorHandler(new RestTemplateResponseErrorHandler()).build();
+
 		ResponseEntity<PatientVo> response = restTemplate.exchange(url, HttpMethod.GET, null, PatientVo.class);
+		
 		return response.getBody();
 	}
 

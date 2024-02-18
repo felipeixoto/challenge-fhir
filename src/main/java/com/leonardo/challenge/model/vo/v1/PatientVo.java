@@ -12,24 +12,24 @@ public class PatientVo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	public String resourceType;
-	public String id;
-	public MetaVo meta;
-	public TextVo text;
+	private String resourceType;
+	private String id;
+	private MetaVo meta;
+	private TextVo text;
 
 	@JsonProperty(value = "identifier")
-	public ArrayList<IdentifierVo> identifiers;
+	private ArrayList<IdentifierVo> identifiers;
 
 	@JsonProperty(value = "name")
-	public ArrayList<NameVo> names;
+	private ArrayList<NameVo> names;
 
-	public String gender;
+	private String gender;
 
 	@JsonProperty(value = "address")
-	public ArrayList<AddressVo> addresses;
+	private ArrayList<AddressVo> addresses;
 
 	@JsonProperty(value = "contact")
-	public ArrayList<ContactVo> contacts;
+	private ArrayList<ContactVo> contacts;
 
 	public PatientVo() {
 	}

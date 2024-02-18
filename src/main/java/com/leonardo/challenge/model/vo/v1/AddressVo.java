@@ -10,11 +10,11 @@ public class AddressVo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	public String use;
-	public String text;
-	public String city;
-	public String state;
-	public String postalCode;
+	private String use;
+	private String text;
+	private String city;
+	private String state;
+	private String postalCode;
 
 	public AddressVo() {
 	}
